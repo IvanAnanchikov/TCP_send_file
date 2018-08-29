@@ -4,6 +4,10 @@
 #include <QMainWindow>
 #include <QTcpServer>
 #include <QTcpSocket>
+//#include <QNetworkAccessManager>
+#include <QFile>
+//#include <QtNetwork/QFtp>
+
 
 namespace Ui {
 class MainWindow;
@@ -27,6 +31,16 @@ private slots:
     void on_ListenButton_clicked();
     void on_ConnectButton_clicked();
     void myConnected();
+    void on_send_on_FTP_clicked();
+    void on_sendFile_clicked();
+//    bool writeData(QByteArray data);
+//    QByteArray IntToArray(qint32 source);
+};
+
+struct FileData
+{
+   int  FileSize;
+   char FileName[64];
 };
 
 #endif // MAINWINDOW_H
